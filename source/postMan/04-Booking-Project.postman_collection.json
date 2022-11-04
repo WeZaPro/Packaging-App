@@ -1,0 +1,528 @@
+{
+	"info": {
+		"_postman_id": "0c7f7ab1-49d9-45f8-a01d-89ab212e6567",
+		"name": "04-Booking-Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6143930"
+	},
+	"item": [
+		{
+			"name": "Post-Signup Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"weeAdmin\",\n    \"email\":\"weeAdmin@gmail.com\",\n    \"password\":\"password1234\",\n    \"roles\":[\"admin\"]\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post-Signup moderator",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"weeModerator\",\n    \"email\":\"weeModerator@gmail.com\",\n    \"password\":\"password1234\",\n    \"roles\":[\"moderator\"]\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post-Signup user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"weeUser\",\n    \"email\":\"weeUser@gmail.com\",\n    \"password\":\"password1234\",\n    \"roles\":[\"user\"]\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post-Signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"weeAdmin\",\n    \"password\":\"password1234\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-Signin get token by Bearer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNThiYThhODczY2QzOWQwMzhjMDNhMiIsImlhdCI6MTY2Njc2MDYxNSwiZXhwIjoxNjY2ODQ3MDE1fQ.EVvOn5wDAzFK9QL8qFkCUKuUH2t4ailWTHnQrDJIC8M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNThiYTJlODczY2QzOWQwMzhjMDM5YyIsImlhdCI6MTY2Njc2MDEwNywiZXhwIjoxNjY2ODQ2NTA3fQ.pXxLq-oeTQG54ab_4WRNzp_PHZrrc95krV4aqa90Kd8",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNThiYTJlODczY2QzOWQwMzhjMDM5YyIsImlhdCI6MTY2Njc2MDEwNywiZXhwIjoxNjY2ODQ2NTA3fQ.pXxLq-oeTQG54ab_4WRNzp_PHZrrc95krV4aqa90Kd8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"weeUser\",\n    \"password\":\"password1234\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/test/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-Signin-get token by body",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNThiYTJlODczY2QzOWQwMzhjMDM5YyIsImlhdCI6MTY2Njc2MDEwNywiZXhwIjoxNjY2ODQ2NTA3fQ.pXxLq-oeTQG54ab_4WRNzp_PHZrrc95krV4aqa90Kd8",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNThiYThhODczY2QzOWQwMzhjMDNhMiIsImlhdCI6MTY2Njc2Mjc5NywiZXhwIjoxNjY2ODQ5MTk3fQ.sVGZhG7C6L5Kiffc209j4-H54Pq6z_aIdImJrttoUnw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"weeUser\",\n    \"password\":\"password1234\",\n    \"access_token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNThiYThhODczY2QzOWQwMzhjMDNhMiIsImlhdCI6MTY2Njc2MDgzMiwiZXhwIjoxNjY2ODQ3MjMyfQ.jqJFs2Y1nznELC5DKJIY-_guYp3H1ksZyjRLEmYwLtc\"\n    \n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/test/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-Signin-get token by header",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNThiYThhODczY2QzOWQwMzhjMDNhMiIsImlhdCI6MTY2Njc2NDc2MSwiZXhwIjoxNjY2ODUxMTYxfQ.rB8I-cnhpNk7yCx52qK573wh9ozBuNrkukxyfmKS-Mo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNThiYThhODczY2QzOWQwMzhjMDNhMiIsImlhdCI6MTY2Njc2NDc2MSwiZXhwIjoxNjY2ODUxMTYxfQ.rB8I-cnhpNk7yCx52qK573wh9ozBuNrkukxyfmKS-Mo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"event\":\"EVENTATION\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/test/user?data=param-Taweesak",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test",
+						"user"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "param-Taweesak"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post box Admin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNThiYTJlODczY2QzOWQwMzhjMDM5YyIsImlhdCI6MTY2Njc3MzgzMiwiZXhwIjoxNjY2ODYwMjMyfQ.lJnzy1KSjkVXme3dFws-K0MgqcgJxFuJoBz5QuwmZAo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"boxWidth\":10,\n    \"boxHigh\":10,\n     \"boxDepth\":10\n    \n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/admin/box",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"admin",
+						"box"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post box User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNThiYTJlODczY2QzOWQwMzhjMDM5YyIsImlhdCI6MTY2Njc3MzgzMiwiZXhwIjoxNjY2ODYwMjMyfQ.lJnzy1KSjkVXme3dFws-K0MgqcgJxFuJoBz5QuwmZAo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"boxWidth\":10,\n    \"boxHigh\":10,\n     \"boxDepth\":10\n    \n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/box",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"box"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post box All",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNThiYTJlODczY2QzOWQwMzhjMDM5YyIsImlhdCI6MTY2Njc3MzgzMiwiZXhwIjoxNjY2ODYwMjMyfQ.lJnzy1KSjkVXme3dFws-K0MgqcgJxFuJoBz5QuwmZAo",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"boxWidth\":10,\n    \"boxHigh\":10,\n     \"boxDepth\":10\n    \n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/all/box",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"all",
+						"box"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Save box",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNThiYTJlODczY2QzOWQwMzhjMDM5YyIsImlhdCI6MTY2Njc3MzgzMiwiZXhwIjoxNjY2ODYwMjMyfQ.lJnzy1KSjkVXme3dFws-K0MgqcgJxFuJoBz5QuwmZAo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"boxType\":\"A2\",\n    \"boxName\":\"ArtCard\",\n    \"spec\" : {\n        \"depth\":4,\n        \"width\":5,\n        \"hight\":2,\n        \"insert\":1,\n        \"flap\":1\n     }\n    \n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/admin/saveBoxSpec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"admin",
+						"saveBoxSpec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Save PaperSpec",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNThiYTJlODczY2QzOWQwMzhjMDM5YyIsImlhdCI6MTY2Njg2MTMwNywiZXhwIjoxNjY2OTQ3NzA3fQ.61uP3P5oInILjPnuJ1-UhpwP_zHdsb8cgRDoAreE9OU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"CodePaper\":\"ABC-112\",\n    \"paperType\":\"Type2\",\n    \"paperName\":\"ArtMatt\",\n    \"paperBrand\":\"AA\",\n    \"paperGrams\":350,\n    \"paperWidth\":36,\n    \"paperHigh\":25,\n    \"paperColor\":\"White\"\n    \n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/admin/insert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"admin",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post GetAll PaperSpec",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNThiYTJlODczY2QzOWQwMzhjMDM5YyIsImlhdCI6MTY2NjkzNjY1NywiZXhwIjoxNjY3MDIzMDU3fQ._k_ceQhRRgItlVsUygxGh4P3c4VYLhJ8-kxa49dgkOA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"paperType\":\"Type1\",\n    \"paperName\":\"Artcard\",\n    \"paperBrand\":\"AA\",\n    \"paperGrams\":350,\n    \"paperWidth\":36,\n    \"paperHigh\":25,\n    \"paperColor\":\"White\"\n    \n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/admin/paper",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"admin",
+						"paper"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
